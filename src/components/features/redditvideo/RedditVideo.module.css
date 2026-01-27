@@ -1,0 +1,233 @@
+.page {
+  min-height: 100dvh;
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--color-border-default);
+  background: var(--color-background-primary);
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-width: 0;
+}
+
+.backButton {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--color-border-default);
+  background: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  transition: all 140ms ease;
+}
+
+.backButton:hover {
+  background: var(--color-background-surface);
+  border-color: var(--color-text-secondary);
+}
+
+.titleWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.titleIcon {
+  color: var(--color-brand-primary);
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.primaryAction {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: var(--color-brand-primary);
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 140ms ease;
+}
+
+.primaryAction:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primaryAction:not(:disabled):hover {
+  filter: brightness(1.1);
+}
+
+.tabsContainer {
+  padding: 0 24px;
+  border-bottom: 1px solid var(--color-border-default);
+  background: var(--color-background-primary);
+}
+
+.tabsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 64px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.tabButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: all 140ms ease;
+}
+
+.tabButtonActive {
+  background: var(--color-background-secondary);
+  color: var(--color-text-primary);
+}
+
+.generateButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  background-color: var(--color-background-secondary);
+  color: var(--color-text-secondary);
+  border: 1px solid var(--color-border-default);
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.generateButtonHighlight {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+}
+
+.generateButtonHighlight:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.generateButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 320px;
+    align-items: start;
+  }
+}
+
+.panel {
+  background: var(--color-background-secondary);
+  border: 1px solid var(--color-border-default);
+  border-radius: 12px;
+}
+
+.subtitleFade {
+  animation: subtitleFade 1s ease-in-out infinite alternate;
+}
+
+.tabStep {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-background-surface);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.tabStepActive {
+  background-color: #3b82f6;
+  color: white;
+}
+
+@keyframes subtitleFade {
+  from { opacity: 0.8; }
+  to { opacity: 1; }
+}
+
+@keyframes subtitlePop {
+  from { transform: scale(0.98); }
+  to { transform: scale(1.02); }
+}
+
+.footerNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 24px 0;
+}
+
+.pillButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid var(--color-border-default);
+  background: var(--color-background-secondary);
+  color: var(--color-text-primary);
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 140ms ease;
+}
+
+.pillButtonActive {
+  background: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+  color: white;
+}

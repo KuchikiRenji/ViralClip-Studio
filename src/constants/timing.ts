@@ -1,0 +1,20 @@
+export const TIMING = {
+  DELAY_MS: {
+    SHORT: 300,
+    MEDIUM: 500,
+    LONG: 1000,
+    VERY_LONG: 1500,
+    EXTRA_LONG: 2000,
+    ULTRA_LONG: 3000,
+  },
+  COPY_FEEDBACK_MS: 2000,
+  DEFAULT_VIDEO_DURATION_SECONDS: 60,
+  FALLBACK_CLIP_INTERVAL_SECONDS: 30,
+} as const;
+
+
+
+
+
+
+

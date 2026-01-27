@@ -1,0 +1,8 @@
+export { QuickSubtitles } from './QuickSubtitles';
+
+
+
+
+
+
+

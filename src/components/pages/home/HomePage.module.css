@@ -1,0 +1,114 @@
+.pageWrapper {
+    min-height: 100vh;
+    width: 100%;
+    background-color: var(--color-background);
+    color: white;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 640px) {
+    .pageWrapper {
+        padding-bottom: 2rem;
+    }
+}
+
+.backgroundEffects {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 0;
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .backgroundEffects {
+        display: block;
+    }
+}
+
+.glowOrb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(100px);
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.glowOrb1 {
+    top: -10%;
+    left: -10%;
+    width: 40%;
+    height: 40%;
+    background-color: rgba(var(--color-brand-primary-rgb), 0.08);
+    opacity: 0.4;
+}
+
+.glowOrb2 {
+    bottom: -10%;
+    right: -10%;
+    width: 40%;
+    height: 40%;
+    background-color: rgba(var(--color-brand-primary-rgb), 0.06);
+    opacity: 0.3;
+}
+
+.contentContainer {
+    position: relative;
+    z-index: 10;
+    flex: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.contentContainerCentered {
+    justify-content: center;
+}
+
+.contentContainerAligned {
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .contentContainer {
+        padding: 1.5rem 1.5rem 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .contentContainer {
+        padding: 2rem 2.5rem 2rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .contentContainer {
+        padding: 2rem 3rem 2rem;
+    }
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionSpacing {
+    margin-bottom: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .sectionSpacing {
+        margin-bottom: 2rem;
+    }
+}

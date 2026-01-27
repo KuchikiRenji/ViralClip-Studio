@@ -1,0 +1,335 @@
+.pageShell {
+  --svc-outline: color-mix(in srgb, var(--color-text-primary) 6%, transparent);
+  --svc-outline-quiet: color-mix(in srgb, var(--color-text-primary) 3%, transparent);
+  --svc-outline-hover: color-mix(in srgb, var(--color-text-primary) 10%, transparent);
+  --svc-focus: color-mix(in srgb, var(--color-brand-primary) 45%, transparent);
+  --svc-surface: color-mix(in srgb, var(--color-background-surface) 88%, var(--color-text-primary) 12%);
+  --svc-surface-2: color-mix(in srgb, var(--color-background-secondary) 92%, var(--color-text-primary) 8%);
+  position: relative;
+}
+
+.page {
+  padding: 1.5rem 0 2.5rem;
+}
+
+.layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .layout {
+    grid-template-columns: minmax(0, 1fr) 25rem;
+    align-items: start;
+    gap: 2rem;
+  }
+}
+
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.75rem;
+}
+
+.backButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid var(--svc-outline-quiet);
+  background: color-mix(in srgb, var(--color-background-secondary) 80%, transparent);
+  color: color-mix(in srgb, var(--color-text-primary) 72%, transparent);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: border-color 150ms ease, color 150ms ease, transform 150ms ease, background-color 150ms ease;
+}
+
+.backButton:hover {
+  border-color: var(--svc-outline);
+  background: color-mix(in srgb, var(--color-background-secondary) 92%, transparent);
+  color: var(--color-text-primary);
+}
+
+.backButton:active {
+  transform: scale(0.98);
+}
+
+.backButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--svc-focus);
+}
+
+.hero {
+  border: 1px solid var(--svc-outline-quiet);
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, var(--svc-surface) 0%, var(--svc-surface-2) 100%);
+  padding: 1.25rem 1.25rem 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 1.75rem 1.75rem 2rem;
+  }
+}
+
+.heroTitle {
+  font-family: var(--type-family-display);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  font-size: 2rem;
+  margin: 0.5rem 0 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+}
+
+.heroSubtitle {
+  color: color-mix(in srgb, var(--color-text-primary) 62%, transparent);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid color-mix(in srgb, var(--color-brand-primary) 22%, transparent);
+  background: color-mix(in srgb, var(--color-brand-primary) 10%, transparent);
+  color: var(--color-brand-primary);
+  border-radius: 9999px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.offers {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.offerCard {
+  border: 1px solid var(--svc-outline-quiet);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--color-background-surface) 90%, transparent);
+  padding: 1rem 1rem 0.9rem;
+  transition: border-color 150ms ease, transform 150ms ease, background-color 150ms ease;
+}
+
+.offerCard:hover {
+  border-color: var(--svc-outline);
+  background: color-mix(in srgb, var(--color-background-surface) 96%, transparent);
+}
+
+.offerHeader {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.offerPriceLine {
+  font-size: 0.85rem;
+  font-weight: 800;
+  color: color-mix(in srgb, var(--color-text-primary) 78%, transparent);
+}
+
+.offerTitle {
+  font-family: var(--type-family-display);
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.15;
+  font-size: 1.125rem;
+}
+
+.offerDesc {
+  margin: 0;
+  color: color-mix(in srgb, var(--color-text-primary) 58%, transparent);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.toggleRow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.85rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid var(--svc-outline-quiet);
+}
+
+.checkbox {
+  width: 1.1rem;
+  height: 1.1rem;
+  border-radius: 0.3rem;
+  border: 1px solid var(--svc-outline);
+  background: transparent;
+  accent-color: var(--color-brand-primary);
+}
+
+.toggleLabel {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: color-mix(in srgb, var(--color-text-primary) 78%, transparent);
+}
+
+.bundleCard {
+  border: 1px solid color-mix(in srgb, var(--color-brand-primary) 18%, transparent);
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--color-brand-primary) 12%, transparent),
+    color-mix(in srgb, var(--color-brand-secondary) 10%, transparent)
+  );
+}
+
+.bundleTitle {
+  font-family: var(--type-family-display);
+  font-weight: 900;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.bundleList {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+  color: color-mix(in srgb, var(--color-text-primary) 70%, transparent);
+  font-weight: 650;
+  font-size: 0.9rem;
+}
+
+.finePrint {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.55;
+  color: color-mix(in srgb, var(--color-text-primary) 45%, transparent);
+}
+
+.summary {
+  border: 1px solid var(--svc-outline);
+  border-radius: 1.25rem;
+  background: color-mix(in srgb, var(--color-background-secondary) 92%, transparent);
+  padding: 1.25rem;
+  position: sticky;
+  top: 1rem;
+}
+
+.summaryTitle {
+  font-family: var(--type-family-display);
+  font-weight: 900;
+  margin: 0 0 1rem;
+  letter-spacing: -0.01em;
+  font-size: 1.25rem;
+}
+
+.fieldLabel {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--color-text-primary) 60%, transparent);
+}
+
+.input {
+  width: 100%;
+  margin-top: 0.4rem;
+  padding: 0.75rem 0.85rem;
+  border-radius: 0.85rem;
+  border: 1px solid var(--svc-outline-quiet);
+  background: color-mix(in srgb, var(--color-background-surface) 92%, transparent);
+  color: var(--color-text-primary);
+}
+
+.input:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--svc-focus);
+  border-color: var(--svc-outline-hover);
+}
+
+.lineItems {
+  margin-top: 1rem;
+  border-top: 1px solid var(--svc-outline-quiet);
+  padding-top: 0.9rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lineItem {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: color-mix(in srgb, var(--color-text-primary) 74%, transparent);
+}
+
+.total {
+  margin-top: 0.75rem;
+  border-top: 1px solid var(--svc-outline-quiet);
+  padding-top: 0.85rem;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-weight: 900;
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+}
+
+.terms {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+  color: color-mix(in srgb, var(--color-text-primary) 55%, transparent);
+}
+
+.termsLink {
+  color: var(--color-brand-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.checkout {
+  margin-top: 0.9rem;
+  width: 100%;
+  padding: 0.85rem 0.95rem;
+  border-radius: 0.95rem;
+  border: 1px solid color-mix(in srgb, var(--color-text-primary) 18%, transparent);
+  background: var(--color-text-primary);
+  color: var(--color-background-primary);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: transform 150ms ease, filter 150ms ease;
+}
+
+.checkout:hover {
+  filter: brightness(1.05);
+}
+
+.checkout:active {
+  transform: scale(0.99);
+}
+
+.checkout:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.checkout:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px var(--svc-focus);
+}
+
+
