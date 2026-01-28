@@ -1,4 +1,4 @@
-![ViralClip Studio](public/paywall-test.png)
+![ViralClip Studio](public/main.jpg)
 
 # ViralClip Studio
 
